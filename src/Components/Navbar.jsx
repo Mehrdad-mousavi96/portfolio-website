@@ -3,6 +3,7 @@ import { HiCode } from "react-icons/hi";
 import { FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import cv from '../assets/cv.pdf'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -73,7 +74,7 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300"
               target={"_blank"}
-              href="https://github.com/Mehrdad-mousavi96"
+              href="mailto:mehrdad.fmousavi@gmail.com"
             >
               Email
               <HiOutlineMail size={33} />
@@ -83,7 +84,8 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300"
               target={"_blank"}
-              href="https://github.com/Mehrdad-mousavi96"
+              href={cv}
+              download
             >
               Resume
               <BsFillPersonLinesFill size={32} />
