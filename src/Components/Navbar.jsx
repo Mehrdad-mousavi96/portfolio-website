@@ -3,13 +3,14 @@ import { HiCode } from "react-icons/hi";
 import { FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import cv from '../assets/cv.pdf'
+import cv from "../assets/cv.pdf";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   return (
     <div className="fixed w-full h-24 flex justify-between items-center px-4 bg-slate-900 text-gray-300">
+      
       {/* logo */}
       <div className="hover:cursor-pointer animate-bounce duration-300">
         <HiCode size={40} className="text-pink-600" />
@@ -47,10 +48,10 @@ const Navbar = () => {
         <li className="py-6 text-4xl">Contact</li>
       </ul>
 
-      {/* social icons */}
-      <div className="flex fixed flex-col top-[35%] left-0">
+      {/* social icons > xs */}
+      <div className="hidden xs:flex xs:fixed xs:flex-col xs:top-[35%] xs:left-0  ">
         <ul className="">
-          <li className="w-[140px] h-[50px] left-0 flex justify-between items-center ml-[-85px] xs:ml-[-80px] xs:hover:ml-[-5px] bg-blue-600">
+          <li className="w-[140px] h-[50px] left-0 flex justify-between items-center  ml-[-80px] hover:ml-[-5px] bg-blue-600">
             <a
               className="flex justify-between items-center w-full text-gray-300"
               target={"_blank"}
@@ -60,7 +61,7 @@ const Navbar = () => {
               <FaLinkedin size={33} />
             </a>
           </li>
-          <li className="my-2 w-[140px] h-[50px] left-0 flex justify-between items-center ml-[-85px] xs:ml-[-80px] xs:hover:ml-[-5px] bg-black">
+          <li className="my-2 w-[140px] h-[50px] left-0 flex justify-between items-center ml-[-80px] hover:ml-[-5px] bg-black">
             <a
               className="flex justify-between items-center w-full text-gray-300"
               target={"_blank"}
@@ -70,7 +71,7 @@ const Navbar = () => {
               <FaGithub size={33} />
             </a>
           </li>
-          <li className="my-2 w-[140px] h-[50px] left-0 flex justify-between items-center ml-[-85px] xs:ml-[-80px] xs:hover:ml-[-5px] bg-[#7079d3]">
+          <li className="my-2 w-[140px] h-[50px] left-0 flex justify-between items-center ml-[-80px] hover:ml-[-5px] bg-[#7079d3]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
               target={"_blank"}
@@ -80,7 +81,7 @@ const Navbar = () => {
               <HiOutlineMail size={33} />
             </a>
           </li>
-          <li className="my-2 w-[140px] h-[50px] left-0 flex justify-between items-center ml-[-85px] xs:ml-[-80px] xs:hover:ml-[-5px] bg-[#1f484c]">
+          <li className="my-2 w-[140px] h-[50px] left-0 flex justify-between items-center ml-[-80px] hover:ml-[-5px] bg-[#1f484c]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
               target={"_blank"}
@@ -93,6 +94,51 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
+      {/* social icons mobile */}
+      <div className="flex fixed flex-col top-[35%] left-0 xs:hidden ">
+        <ul className="">
+          <li className="w-10 h-10 ml-1 flex justify-center items-center bg-blue-600">
+            <a
+              className="flex justify-center items-center text-gray-300"
+              target={"_blank"}
+              href="https://www.linkedin.com/in/mehrdadmousavi-b589761bb/?locale=en_US"
+            >
+              <FaLinkedin size={30} />
+            </a>
+          </li>
+          <li className="w-10 h-10 ml-1 flex justify-center items-center my-2 bg-black">
+            <a
+              className="flex justify-center items-center text-gray-300"
+              target={"_blank"}
+              href="https://github.com/Mehrdad-mousavi96"
+            >
+              <FaGithub size={28} />
+            </a>
+          </li>
+          <li className="w-10 h-10 ml-1 flex justify-center items-center my-2 bg-[#7079d3]">
+            <a
+              className="flex justify-center items-center text-gray-300"
+              target={"_blank"}
+              href="mailto:mehrdad.fmousavi@gmail.com"
+            >
+              <HiOutlineMail size={29} />
+            </a>
+          </li>
+          <li className="w-10 h-10 ml-1 flex justify-center items-center my-2 bg-[#1f484c]">
+            <a
+              className="flex justify-center items-center text-gray-300"
+              target={"_blank"}
+              href={cv}
+              download
+            >
+              <BsFillPersonLinesFill size={32} />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      
     </div>
   );
 };

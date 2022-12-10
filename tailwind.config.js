@@ -4,7 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      personal: {
+        'normal': 'max-w-[350px]',
+        'mxs': 'xs:max-w-[350px]',
+        'msm': 'sm:max-w-[500px]',
+        'mmd': 'md:max-w-[650px]',
+        'mlg': 'lg:max-w-[900px]',
+        'mxl': 'xl:max-w-[1100px]'
+      }
+    },
     screens: {
       'xs': '475px',
       'sm': '640px',
