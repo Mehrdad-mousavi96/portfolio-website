@@ -9,6 +9,6 @@
         @apply font-[Raleway];
     }
     li {
-        @apply px-4 cursor-pointer hover:scale-110 duration-300 hover:underline
+        @apply px-4 cursor-pointer hover:scale-110 duration-300 hover:text-pink-600
     }
 }

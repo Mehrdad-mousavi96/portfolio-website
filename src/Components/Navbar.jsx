@@ -19,9 +19,9 @@ const Navbar = () => {
       {/* menu */}
       <ul className="hidden md:flex">
         <li>Home</li>
+        <li>About</li>
         <li>Experience</li>
         <li>Work</li>
-        <li>About</li>
         <li>Contact</li>
       </ul>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
       </ul>
 
       {/* social icons > xs */}
-      <div className="hidden xs:flex xs:fixed xs:flex-col xs:top-[35%] xs:left-0  ">
+      <div className="hidden xs:flex xs:fixed xs:flex-col xs:top-[40%] xs:left-0  ">
         <ul className="">
           <li className="w-[140px] h-[50px] left-0 flex justify-between items-center  ml-[-80px] hover:ml-[-5px] bg-blue-600">
             <a
@@ -96,7 +96,7 @@ const Navbar = () => {
       </div>
 
       {/* social icons mobile */}
-      <div className="flex fixed flex-col top-[35%] left-0 xs:hidden ">
+      <div className="flex fixed flex-col top-[40%] left-0 xs:hidden ">
         <ul className="">
           <li className="w-10 h-10 ml-1 flex justify-center items-center bg-blue-600">
             <a
