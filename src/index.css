@@ -12,3 +12,10 @@
         @apply px-4 cursor-pointer hover:scale-110 duration-300 hover:text-pink-600
     }
 }
+
+.content-div {
+    background-image: no-repeat;
+    background-size: cover;
+    background-position: top;
+    
+}

@@ -9,8 +9,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   return (
-    <div className="fixed w-full h-24 flex justify-between items-center px-4 bg-slate-900 text-gray-300">
-      
+    <div className="fixed w-full lg:h-24 h-16 flex justify-between items-center px-4 bg-slate-900  text-gray-300">
       {/* logo */}
       <div className="hover:cursor-pointer animate-bounce duration-300">
         <HiCode size={40} className="text-pink-600" />
@@ -137,8 +136,6 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-
-      
     </div>
   );
 };

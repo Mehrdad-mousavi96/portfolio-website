@@ -7,12 +7,13 @@ import ReactImg from "../assets/react.png";
 import GitHub from "../assets/github.png";
 import Tailwind from "../assets/tailwind.png";
 import Redux from "../assets/redux.png";
+import Api from "../assets/api.png";
 
 const Skills = () => {
   return (
     <div
       name="skills"
-      className="w-full h-screen flex justify-center items-center bg-slate-900 text-gray-300"
+      className="w-full h-screen flex justify-center items-center bg-slate-900 text-gray-300 my-16"
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="xs:text-right pb-8 pl-4 text-center">
@@ -21,7 +22,7 @@ const Skills = () => {
           </p>
         </div>
         {/* body */}
-        <div className="max-w-[350px] xs:max-w-[350px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1100px] w-full h-full px-8 xs:px-4 py-2 mx-auto">
+        <div className="max-w-[350px] xs:max-w-[350px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1100px] w-full h-full px-8 xs:px-4 py-2 mx-auto ">
           <div className="text-right xs:text-center text-lg xs:text-xl md:text-2xl">
             <p className="">The technologies I've worked with</p>
           </div>
@@ -54,10 +55,10 @@ const Skills = () => {
               <img className="w-20" src={Redux} alt="Hml Icon" />
               <p className="my-4">Redux</p>
             </div>
-            {/* <div className="shadow-md flex flex-col items-center justify-center shadow-[#040c16] hover:scale-110 duration-300">
-              <img className="w-20" src={HTML} alt="Hml Icon" />
-              <p className="my-4">HTML</p>
-            </div> */}
+            <div className="shadow-md flex flex-col items-center justify-center shadow-[#040c16] hover:scale-110 duration-300">
+              <img className="w-20" src={Api} alt="Hml Icon" />
+              <p className="my-4">Rest Api</p>
+            </div>
           </div>
         </div>
       </div>

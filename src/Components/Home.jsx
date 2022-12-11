@@ -1,9 +1,14 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import Me1 from "../assets/Images/Untitled.png";
 
 const Home = () => {
   return (
-    <div name="home" className="bg-slate-900 w-full h-screen">
+    <div
+      style={{ backgroundImage: `url(${Me1})` }}
+      name="home"
+      className="w-full h-screen content-div "
+    >
       {/* container */}
       <div className="max-w-[350px] xs:max-w-[350px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1100px] mx-auto pl-12 flex flex-col justify-center h-full">
         <p className="text-lg md:text-3xl text-pink-600 pt-2">Hi, my name is</p>
