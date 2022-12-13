@@ -13,7 +13,7 @@ const Skills = () => {
   return (
     <div
       name="skills"
-      className="w-full h-screen flex justify-center items-center bg-slate-900 text-gray-300 my-16"
+      className="w-full h-screen flex justify-center items-center text-gray-300"
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="xs:text-right pb-8 pl-4 text-center">
@@ -22,7 +22,7 @@ const Skills = () => {
           </p>
         </div>
         {/* body */}
-        <div className="max-w-[350px] xs:max-w-[350px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1100px] w-full h-full px-8 xs:px-4 py-2 mx-auto ">
+        <div className="max-w-[350px] xs:max-w-[350px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1100px] w-full px-8 xs:px-4 py-2 mx-auto ">
           <div className="text-right xs:text-center text-lg xs:text-xl md:text-2xl">
             <p className="">The technologies I've worked with</p>
           </div>
