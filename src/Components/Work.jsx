@@ -1,12 +1,46 @@
 import React from "react";
-import Food from "../assets/food.png";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { RxDotFilled, RxDot } from "react-icons/rx";
+import { useState } from "react";
 
 const Work = () => {
+  const slides = [
+    {
+      url: "/images/food.png",
+    },
+    {
+      url: "/images/food2.png",
+    },
+    {
+      url: "/images/food3.png",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fillDot, setFillDot] = useState(false);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
   return (
     <div
       name="work"
       className="w-full h-screen flex justify-center items-center bg-slate-900 text-gray-300"
     >
+      <img src={""} alt="" />
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="xs:text-right pb-8 pl-4 text-center">
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 tracking-wide">
@@ -18,51 +52,41 @@ const Work = () => {
           <div className="text-center xs:text-center text-lg xs:text-xl md:text-2xl">
             <p className="">Check out some of my recent works</p>
           </div>
-          <div className="w-full py-8 flex flex-col xs:flex-row gap-3 text-center mx-auto ml-3">
-            {/* hover effects */}
+
+          {/* slider */}
+          <div className="py-8 flex flex-col gap-3 text-center mx-auto ml-3">
             <div
-              style={{ backgroundImage: `url(${Food})` }}
-              className="shadow-lg w-[300px] xs:w-[400px] xs:h-[200px] xs:grid-cols-2  shadow-slate-600 group container rounded-md flex justify-center items-center mx-auto content-work"
+              style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+              className="relative shadow-lg w-[300px] xs:w-[400px] h-[150px] xs:h-[200px] xs:grid-cols-2 shadow-slate-600 group container duration-300 rounded-md flex items-center mx-auto content-work"
             >
-              <div className="opacity-0 group-hover:opacity-80">
-                <span className="2xl font-bold text-white tracking-wider">
-                  React Js Application
-                </span>
-              </div>
-              <div className="px-8 py-4 text-center  flex flex-col items-center justify-center">
-                <a href="">
-                  <button className="text-center rounded-lg px-2 py-1 m-2 bg-white text-gray-700 font-bold text-lg hover:bg-gray-800 hover:text-white duration-300">
-                    Demo
-                  </button>
-                </a>
-                <a href="">
-                  <button className="text-center rounded-lg px-2 py-1 m-2 bg-white text-gray-700 font-bold text-lg hover:bg-gray-800 hover:text-white duration-300">
-                    Code
-                  </button>
-                </a>
-              </div>
+              {/* left arrow */}
+              <span
+                onClick={prevSlide}
+                className="rotate-180 left-3 absolute top-[45%]"
+              >
+                <BsFillArrowRightCircleFill
+                  size={25}
+                  className="cursor-pointer text-slate-800"
+                />
+              </span>
+              {/* right arrow */}
+              <span onClick={nextSlide} className="right-3 absolute top-[45%]">
+                <BsFillArrowRightCircleFill
+                  size={25}
+                  className="cursor-pointer text-slate-800"
+                />
+              </span>
             </div>
-            <div
-              style={{ backgroundImage: `url(${Food})` }}
-              className="shadow-lg w-[300px] xs:w-[400px] xs:grid-cols-2  shadow-slate-600 group container rounded-md flex justify-center items-center mx-auto content-work"
-            >
-              <div className="opacity-0 group-hover:opacity-80">
-                <span className="2xl font-bold text-white tracking-wider">
-                  React Js Application
-                </span>
-              </div>
-              <div className="px-8 py-4 text-center  flex flex-col items-center justify-center">
-                <a href="">
-                  <button className="text-center rounded-lg px-2 py-1 m-2 bg-white text-gray-700 font-bold text-lg hover:bg-gray-800 hover:text-white duration-300">
-                    Demo
-                  </button>
-                </a>
-                <a href="">
-                  <button className="text-center rounded-lg px-2 py-1 m-2 bg-white text-gray-700 font-bold text-lg hover:bg-gray-800 hover:text-white duration-300">
-                    Code
-                  </button>
-                </a>
-              </div>
+            <div className="flex justify-center py-2">
+              {slides.map((slide, slideIndex) => (
+                <div
+                  key={slideIndex}
+                  onClick={() => goToSlide(slideIndex)}
+                  className="text-2xl cursor-pointer"
+                >
+                  <RxDotFilled className="flex after:text-gray-400" />
+                </div>
+              ))}
             </div>
           </div>
         </div>

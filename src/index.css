@@ -26,11 +26,3 @@
     background-size: 100% 100%;
 }
 
-.content-work:hover {
-    background-image: linear-gradient(
-        to Right,
-        rgba(112, 157, 255, 0.8),
-        hsla(242, 74%, 61%, .8)
-        
-    ) !important
-}

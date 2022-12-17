@@ -6,14 +6,14 @@ const Contact = () => {
       name="contact"
       className="w-full h-screen flex flex-col justify-center items-center bg-slate-900 text-gray-300"
     >
-      <div className="xs:text-right pb-8 pl-4 text-center">
+      <div className="xs:text-right pl-4 text-center mb-8">
         <p className="text-4xl font-bold inline border-b-4 border-pink-600 tracking-wide">
-          Contact Me
+          Contact
         </p>
       </div>
       {/* container */}
-      <div className="max-w-[350px] xs:max-w-[350px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1100px] mx-auto pl-6 flex flex-col justify-center items-center w-full h-full">
-        <div className="text-center xs:text-center text-lg xs:text-xl md:text-2xl">
+      <div className="max-w-[350px] xs:max-w-[350px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[900px] xl:max-w-[1100px] mx-auto pl-6 flex flex-col justify-center items-center w-full">
+        <div className="text-center text-lg xs:text-xl md:text-2xl">
           <p className="">Submit me the form below or shoot me an email</p>
         </div>
         <form
